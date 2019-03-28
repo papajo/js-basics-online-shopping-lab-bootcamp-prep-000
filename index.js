@@ -11,14 +11,24 @@ function setCart(c) {
 
 function addToCart(item) {
   
-  let price = Math.floor(Math.random(1,100))
-  let newCartObj = [{  itemName: item, 
+  let price = Math.floor(Math.random()*100)
+  let newCart = [{  itemName: item, 
                       itemPrice: price 
-                  }]
+                  }];
+  cart.push(newCart)          ;      
+  return `${itemName} has been added to your cart.`;
 }
 
 function viewCart() {
-  // write your code here
+  let cartSt = "";
+  for (let i = 0; i < cart.length-1; i++) {
+    if (i === cart.length-1) {
+       cartSt += `In your cart, you have ${itemName} at ${price}.';
+    } else { 
+      cartSt += `In your cart, you have ${itemName} at ${price},`;
+    }
+  }
+  return cartSt;
 }
 
 function total() {
