@@ -25,9 +25,9 @@ function viewCart() {
     if (cart.length === 0) {
       cartSt += `Your shopping cart is empty.`
     } else if (i === cart.length-1) {
-       cartSt += `In your cart, you have ${itemName} at ${price}.`
+       cartSt += `In your cart, you have ${cart.itemName} at ${cart.price}.`
     } else { 
-      cartSt += `In your cart, you have ${itemName} at ${price},`
+      cartSt += `In your cart, you have ${cart.itemName} at ${cart.price},`
     }
   }
   return cartSt;
