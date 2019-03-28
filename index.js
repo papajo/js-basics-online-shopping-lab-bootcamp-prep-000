@@ -25,11 +25,9 @@ function viewCart() {
   if (cart.length === 0) {
       return `Your shopping cart is empty.`
   } else if (cart.length === 1) {
-    
-  
+        cartSt += `${cartItms}`
   }
   else {
-    
           for (let i = 0; i < cart.length; i++) {
               
                 if (i === cart.length-1) {
