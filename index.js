@@ -21,18 +21,22 @@ function addToCart(item) {
 
 function viewCart() {
   let cartSt = "In your cart, you have ";
+  let cartItms = ""
   if (cart.length === 0) {
-      return cartSt += `Your shopping cart is empty.`
+      return `Your shopping cart is empty.`
   } else {
           for (let i = 0; i < cart.length; i++) {
               if (i === cart.length-1) {
-                  return cartSt += `In your cart, you have ${cart[i].itemName} at $${cart[i].itemPrice}.`
+                  return `${cartSt} ${cart[i].itemName} at $${cart[i].itemPrice}.`
                      } else { 
-                            cartSt += `In your cart, you have ${cart[i].itemName} at $${cart[i].itemPrice},`
+                            if (i === cart.length-1) {
+                              cartItms += "and "
+                            }
+                            cartItms += `${cart[i].itemName} at $${cart[i].itemPrice},`
                       }
          }
     }
-  return cartSt;
+  return `${cartSt} ${cartItms}`;
 }
 
 function total() {
