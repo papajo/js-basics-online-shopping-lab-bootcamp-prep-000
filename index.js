@@ -34,11 +34,23 @@ function viewCart() {
 }
 
 function total() {
-  
+  let totItems = 0
+  let totValue = 0
+  for (let i = 0; i < cart.length-1; i++) {
+    //totItems += i    
+    totValue += cart[i].price
+  }
+  return totValue
 }
 
 function removeFromCart(item) {
-  // write your code here
+  for (let i = 0; i < cart.length-1; i++) {
+    if (cart[i].itemName === item) {
+      cart.splice(i)
+    } else {
+      return 'That item is not in your cart.'
+    }
+  }
 }
 
 function placeOrder(cardNumber) {
