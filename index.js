@@ -28,7 +28,7 @@ function viewCart() {
               if (i === cart.length-1) {
                   cartSt += `In your cart, you have ${cart[i].itemName} at ${cart[i].itemPrice}.`
                      } else { 
-                            cartSt += `In your cart,  you have ${cart[i].itemName} at ${cart[i].itemPrice},`
+                            cartSt += `In your cart,  you have ${cart[i].itemName} at $${cart[i].itemPrice},`
                       }
          }
     }
