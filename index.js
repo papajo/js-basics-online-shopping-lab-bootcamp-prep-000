@@ -31,12 +31,9 @@ function viewCart() {
                      } else { 
                             if (i === cart.length) {
                               cartItms += "and "
-                            }
-                            cartItms += `${cart[i].itemName} at $${cart[i].itemPrice}`
-                            if (i === cart.length) {
-                              cartItms += "."
+                              cartItms += `${cart[i].itemName} at $${cart[i].itemPrice}.`
                             } else {
-                              cartItms += ","
+                              cartItms += `${cart[i].itemName} at $${cart[i].itemPrice},`
                             }
                       }
          }
