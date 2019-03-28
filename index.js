@@ -21,15 +21,18 @@ function addToCart(item) {
 
 function viewCart() {
   let cartSt = "";
-  for (let i = 0; i < cart.length; i++) {
-    if (cart.length === 0) {
-      cartSt += `Your shopping cart is empty.`
-    } else if (i === cart.length-1) {
-       cartSt += `In your cart, you have ${cart.itemName} at ${cart.price}.`
-    } else { 
-      cartSt += `In your cart, you have ${cart.itemName} at ${cart.price},`
+  if (cart.length === 0) {
+      return cartSt += `Your shopping cart is empty.`
+      else {
+            for (let i = 0; i < cart.length; i++) {
+                if (i === cart.length-1) {
+                    cartSt += `In your cart, you have ${cart.itemName} at ${cart.price}.`
+                     } else { 
+                            cartSt += `In your cart,  you have ${cart.itemName} at ${cart.price},`
+                      }
+      }
     }
-  }
+  
   return cartSt;
 }
 
