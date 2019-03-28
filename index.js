@@ -23,9 +23,9 @@ function viewCart() {
   let cartSt = "";
   for (let i = 0; i < cart.length-1; i++) {
     if (i === cart.length-1) {
-       cartSt += `In your cart, you have ${itemName} at ${price}.';
+       cartSt += `In your cart, you have ${itemName} at ${price}.`
     } else { 
-      cartSt += `In your cart, you have ${itemName} at ${price},`;
+      cartSt += `In your cart, you have ${itemName} at ${price},`
     }
   }
   return cartSt;
