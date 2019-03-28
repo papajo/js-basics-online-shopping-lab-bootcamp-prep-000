@@ -44,13 +44,13 @@ function total() {
   let totValue = 0
   for (let i = 0; i < cart.length; i++) {
     //totItems += i    
-    totValue += cart[i].price
+    totValue += cart[i].itemPrice
   }
   return totValue
 }
 
 function removeFromCart(item) {
-  for (let i = 0; i < cart.length-1; i++) {
+  for (let i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
       cart.splice(i, 1)
     } else {
