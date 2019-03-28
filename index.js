@@ -46,7 +46,6 @@ function total() {
   let totItems = 0
   let totValue = 0
   for (let i = 0; i < cart.length; i++) {
-    //totItems += i    
     totValue += cart[i].itemPrice
   }
   return totValue
