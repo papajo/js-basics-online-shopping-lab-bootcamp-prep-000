@@ -10,7 +10,11 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  
+  let price = Math.floor(Math.random(1,100))
+  let newCartObj = [{  itemName: item, 
+                      itemPrice: price 
+                  }]
 }
 
 function viewCart() {
