@@ -30,7 +30,7 @@ function viewCart() {
                   return `${cartSt} ${cart[i].itemName} at $${cart[i].itemPrice}.`
                      } else { 
                             if (i === cart.length) {
-                              cartItms += "and "
+                              cartItms += " and "
                               cartItms += `${cart[i].itemName} at $${cart[i].itemPrice}.`
                             } else {
                               cartItms += `${cart[i].itemName} at $${cart[i].itemPrice},`
