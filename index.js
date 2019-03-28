@@ -32,7 +32,12 @@ function viewCart() {
                             if (i === cart.length) {
                               cartItms += "and "
                             }
-                            cartItms += `${cart[i].itemName} at $${cart[i].itemPrice},`
+                            cartItms += `${cart[i].itemName} at $${cart[i].itemPrice}`
+                            if (i === cart.length) {
+                              cartItms += "."
+                            } else {
+                              cartItms += ","
+                            }
                       }
          }
     }
