@@ -22,7 +22,9 @@ function addToCart(item) {
 function viewCart() {
   let cartSt = "";
   for (let i = 0; i < cart.length-1; i++) {
-    if (i === cart.length-1) {
+    if (cart.length === 0) {
+      cartSt += `Your shopping cart is empty.`
+    } else if (i === cart.length-1) {
        cartSt += `In your cart, you have ${itemName} at ${price}.`
     } else { 
       cartSt += `In your cart, you have ${itemName} at ${price},`
@@ -32,7 +34,7 @@ function viewCart() {
 }
 
 function total() {
-  // write your code here
+  
 }
 
 function removeFromCart(item) {
