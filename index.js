@@ -26,16 +26,16 @@ function viewCart() {
       return `Your shopping cart is empty.`
   } else {
           for (let i = 0; i < cart.length; i++) {
-              if (i === cart.length) {
-                  return `${cartSt} ${cart[i].itemName} at $${cart[i].itemPrice}.`
-                     } else { 
+              // if (i === cart.length) {
+              //     return `${cartSt} ${cart[i].itemName} at $${cart[i].itemPrice}.`
+              //       } else { 
                             if (i === cart.length) {
                               cartItms += " and "
                               cartItms += `${cart[i].itemName} at $${cart[i].itemPrice}.`
                             } else {
                               cartItms += `${cart[i].itemName} at $${cart[i].itemPrice},`
                             }
-                      }
+                      //}
          }
     }
   return `${cartSt} ${cartItms}`;
